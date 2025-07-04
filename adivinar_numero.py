@@ -1,6 +1,10 @@
+"""Este programa es un juego sencillo de adivinar el numero que se genera aleatoriamente.
+En donde dependiendo el rango que escoja la persona, el programa dara ciertas oportunidades para
+adivinarlo.
+"""
 import random
 
-print("Adivina el numero!")
+print("_____Adivina el numero!_____")
 
 rango = int(input("\nIngresa el rango del numero: "))
 

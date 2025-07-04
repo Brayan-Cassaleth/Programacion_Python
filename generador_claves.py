@@ -1,3 +1,5 @@
+"""Programa sencillo para generar contraseñas."""
+
 import random
 
 print("------------------------")
