@@ -8,33 +8,26 @@ import random
 
 print("\n=== PAR O IMPAR ===")
 
-oportunidad = 3
 score = 0
 
-print(f"\n=> Oportunidades: {oportunidad}")
+print(f"\n=> Oportunidades: 3")
 print(f"=> Score: {score}")
 print("\n- Responde 'si' si el numero es par, de lo contrario 'no'")
 
-while oportunidad > 0:
-    number = random.randint(1,50)
+for item in range(3):
+    number = random.randint(1,100)
+    respuesta = "si" if number % 2 == 0 else "no"
     print(f"\nNumero: {number}")
-    answer = input("Respuesta: ")
+    respuesta_usuario = input("Respuesta: ").lower()
     
-    if number % 2 == 0 and answer == "si":
-        score += 1
-        print("Correcto!")
-        oportunidad -= 1
-
-    elif number % 2 != 0 and answer == "no":
-        score += 1
-        print("Correcto!")
-        oportunidad -= 1
-        
-    else:
-        print("\nRespuesta incorrecta. Intentalo nuevamente!")
-        print(f"Score = {score}")
+    if respuesta != respuesta_usuario:
+        print(f"Lo siento, la respuesta era: {respuesta}")
+        print("Sigue intentando.....")
         break
-
+        
+    print("Correcto!")
+    score += 1
+    
 if score == 3:
     print("\n*** Felicitaciones lo lograste! ***")
         
